@@ -20,7 +20,7 @@ import calendar
 import pandas as pd
 import streamlit as st
 import streamlit as st
-# Custom CSS محدث لتحسين توضيح جميع النصوص في التطبيق
+
 st.markdown(
     """
     <style>
