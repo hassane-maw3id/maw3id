@@ -20,23 +20,28 @@ import calendar
 import pandas as pd
 import streamlit as st
 import streamlit as st
-
-# Custom CSS لتوضيح الكتابة وتحسين التباين في التطبيق
+# Custom CSS محدث لتحسين توضيح جميع النصوص في التطبيق
 st.markdown(
     """
     <style>
-        html, body, [class*="css"] {
-            color: #1E293B;
+        /* فرض لون غامق وواضح لجميع النصوص العادية، العناوين، والتسميات */
+        html, body, [class*="css"], p, span, label, div, small, .stMarkdown {
+            color: #0F172A !important;
         }
-        [data-testid="stSidebar"] [class*="css"] {
-            color: #0F172A;
+        
+        /* تلوين النصوص داخل القائمة الجانبية لتكون واضحة جداً */
+        [data-testid="stSidebar"] [class*="css"], [data-testid="stSidebar"] span, [data-testid="stSidebar"] p {
+            color: #0F172A !important;
         }
-        p, span, label, div {
-            font-size: 1rem;
+
+        /* ضبط ألوان العناوين الرئيسية */
+        h1, h2, h3, h4, h5, h6 {
+            color: #020617 !important;
         }
     </style>
     """,
     unsafe_allow_html=True
+)
 )
 APP_DIR = Path(__file__).resolve().parent
 DATA_FILE = APP_DIR / "maw3id_data.json"
