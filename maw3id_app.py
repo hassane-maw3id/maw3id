@@ -20,27 +20,20 @@ import calendar
 import pandas as pd
 import streamlit as st
 import streamlit as st
+st.markdown("""
+<style>
+    html, body, [class*="css"], p, span, label, div, small {
+        color: #0F172A !important;
+    }
+    [data-testid="stSidebar"] * {
+        color: #0F172A !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: #020617 !important;
+    }
+</style>
+""", unsafe_allow_html=True)
 
-st.markdown(
-    """
-    <style>
-        /* فرض لون غامق وواضح لجميع النصوص العادية، العناوين، والتسميات */
-        html, body, [class*="css"], p, span, label, div, small, .stMarkdown {
-            color: #0F172A !important;
-        }
-        
-        /* تلوين النصوص داخل القائمة الجانبية لتكون واضحة جداً */
-        [data-testid="stSidebar"] [class*="css"], [data-testid="stSidebar"] span, [data-testid="stSidebar"] p {
-            color: #0F172A !important;
-        }
-
-        /* ضبط ألوان العناوين الرئيسية */
-        h1, h2, h3, h4, h5, h6 {
-            color: #020617 !important;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
 )
 )
 APP_DIR = Path(__file__).resolve().parent
