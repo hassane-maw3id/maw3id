@@ -19,7 +19,25 @@ import calendar
 
 import pandas as pd
 import streamlit as st
+import streamlit as st
 
+# Custom CSS لتوضيح الكتابة وتحسين التباين في التطبيق
+st.markdown(
+    """
+    <style>
+        html, body, [class*="css"] {
+            color: #1E293B;
+        }
+        [data-testid="stSidebar"] [class*="css"] {
+            color: #0F172A;
+        }
+        p, span, label, div {
+            font-size: 1rem;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 APP_DIR = Path(__file__).resolve().parent
 DATA_FILE = APP_DIR / "maw3id_data.json"
 
