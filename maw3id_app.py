@@ -325,4 +325,8 @@ elif page == "📋 الفواتير والمواعيد":
             if st.button("حفظ التعديلات", key=f"save_edit_{x['id']}"):
                 x.update({"name":new_name,"amount":new_amount,"due":new_due.isoformat(),"category":new_category,"status":new_status,"note":new_note})
                 persist(); st.success("تم حفظ التعديلات."); st.rerun()
-            if st.button("حذف هذا الالتزام", key=
+            if st.button("حذف هذا الالتزام", key=f"delete_{x['id']}"):
+                db["items"] = [z for z in db["items"] if z["id"] != x["id"]]
+                persist()
+                st.warning("تم حذف الالتزام.")
+                st.rerun()
