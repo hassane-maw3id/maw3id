@@ -35,7 +35,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 )
-)
 APP_DIR = Path(__file__).resolve().parent
 DATA_FILE = APP_DIR / "maw3id_data.json"
 
