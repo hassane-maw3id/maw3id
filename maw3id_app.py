@@ -34,7 +34,10 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-)
+File "/mount/src/maw3id/maw3id_app.py", line 37
+  )
+  ^
+SyntaxError: unmatched ')'
 APP_DIR = Path(__file__).resolve().parent
 DATA_FILE = APP_DIR / "maw3id_data.json"
 
